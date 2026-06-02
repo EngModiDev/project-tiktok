@@ -1,9 +1,3 @@
-Here is an extremely detailed, complete, and professional English `README.md` file designed for your project. Every single file, block, and line of code is meticulously explained so that even a absolute beginner can understand the mechanics of this 3D interactive periodic table. 
-
-This README is personalized with your creator profile (`modi`, `modi@mhmwd_`, `@MJcoders`, and `EngModiDev`) to serve as a robust piece of documentation for your TikTok and GitHub showcases.
-
-***
-
 # 3D Interactive Periodic Table
 
 An interactive, high-performance 3D Periodic Table of Elements featuring four dynamic layouts: **Table**, **Sphere**, **Helix**, and **Grid**. Built with vanilla HTML, CSS, GSAP, and 3D CSS transforms, this project automatically scales to fit any screen size, making it perfect for both desktop displays and portrait-oriented mobile viewing (such as TikTok videos).
