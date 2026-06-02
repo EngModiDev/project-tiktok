@@ -1,0 +1,137 @@
+:root {
+  --bg: #060812;
+  --panel: #0f1724;
+  --accent: #66d0ff;
+  --muted: #9fb7d8;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: #e6eef8;
+  font-family: 'Inter', Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Controls bar */
+.controls {
+  position: absolute;
+  top: 25px;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button {
+  background: var(--panel);
+  border: 1px solid rgba(38, 53, 74, 0.9);
+  color: var(--accent);
+  padding: 10px 18px;
+  margin: 0 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+  text-transform: capitalize;
+}
+
+.button.is-active, .button:hover {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 15px rgba(102,208,255,0.35);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Personal Watermark Styling */
+.watermark {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  text-align: right;
+  z-index: 100;
+  pointer-events: none; /* لمنع التداخل مع حركة الماوس */
+  background: rgba(15, 23, 36, 0.6);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(38, 53, 74, 0.5);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--accent);
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(102,208,255,0.4);
+}
+
+.tiktok, .github {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.copy {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* 3D Scene Setup */
+#scene {
+  width: 100vw;
+  height: 100vh;
+  perspective: 3000px; /* تم زيادة العمق قليلاً لتناسب الرؤية الواسعة */
+  overflow: hidden;
+  touch-action: none;
+}
+
+#scene-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Element cards */
+.element {
+  position: absolute;
+  left: -60px;
+  top: -70px;
+  width: 120px;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(15,23,36,0.95), rgba(7,12,22,0.95));
+  border: 1px solid rgba(38, 53, 74, 0.8);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.element-number { font-size: 26px; font-weight: 800; color: #ffffff; }
+.element-symbol { font-size: 20px; font-weight: 800; color: var(--accent); margin-top: 6px; }
+.element-title { font-size: 11px; color: var(--muted); margin-top: 6px; font-weight: 600; }
+
+.element:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 25px rgba(102,208,255,0.4);
+}
+
+@media (max-width: 700px) {
+  .watermark { bottom: 15px; right: 15px; padding: 10px 15px; }
+  .brand-name { font-size: 18px; }
+  .tiktok, .github { font-size: 12px; }
+}

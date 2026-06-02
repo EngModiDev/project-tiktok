@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table - Auto Fit Layout</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+
+  <div class="controls">
+    <div class="controls-group">
+      <button class="button is-active toggle" id="table">Table</button>
+      <button class="button toggle" id="sphere">Sphere</button>
+      <button class="button toggle" id="helix">Helix</button>
+      <button class="button toggle" id="grid">Grid</button>
+    </div>
+  </div>
+
+  <div class="watermark">
+    <div class="brand-name">modi</div>
+    <div class="tiktok">TikTok: @MJcoders</div>
+    <div class="github">GitHub: EngModiDev</div>
+    <div class="copy">© modi@mhmwd_</div>
+  </div>
+
+  <div id="scene">
+    <div id="scene-content"></div>
+  </div>
+
+  <template id="element-template">
+    <div class="element">
+      <div class="element-number"></div>
+      <div class="element-symbol"></div>
+      <div class="element-title"></div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
